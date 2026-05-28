@@ -12,13 +12,21 @@ Developed for automated rooftop solar feasibility assessment using **Artificial 
 ✨ Built with:
 
 🛰️ SAM-based rooftop segmentation
+
 🚧 OpenCV-based obstacle detection and filtering
+
 ☀️ Rooftop usable area estimation
+
 📡 PVGIS solar irradiance analysis
+
 ⚡ Annual solar energy estimation
+
 💰 Financial analysis and ROI payback calculation
+
 🤖 Intelligent recommendation generation
+
 📥 Downloadable rooftop solar assessment report
+
 🎨 Interactive Streamlit dashboard UI  
 
 ---
