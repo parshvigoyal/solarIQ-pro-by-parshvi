@@ -8,3 +8,6 @@ torch
 matplotlib
 pvlib
 pandas
+torchvision
+python-dotenv
+segment-anything
