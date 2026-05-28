@@ -319,12 +319,6 @@ containing:
 🎓 AIML Engineering Student  
 ☀️ AI • Computer Vision • Solar Intelligence
 
-### 🔗 GitHub
-https://github.com/parshvigoyal/solar-industry-ai-assistant
-
-### 🌐 Streamlit Deployment
-https://parshvigoyal-solar-ai.streamlit.app/
-
 ---
 
 # 📜 Copyright & Usage Notice
