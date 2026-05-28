@@ -4,14 +4,20 @@ import cv2
 
 from segment_anything import sam_model_registry
 from segment_anything import SamAutomaticMaskGenerator
+import os
 
 
 # ===================================================
 # LOAD SAM MODEL
 # ===================================================
 
+if os.path.exists(r"D:\AI_MODELS\sam_vit_b_01ec64.pth"):
+    checkpoint_path = r"D:\AI_MODELS\sam_vit_b_01ec64.pth"
+else:
+    checkpoint_path = "models/sam_vit_b_01ec64.pth"
+
 sam = sam_model_registry["vit_b"](
-    checkpoint=r"D:\AI_MODELS\sam_vit_b_01ec64.pth"
+    checkpoint=checkpoint_path
 )
 
 mask_generator = SamAutomaticMaskGenerator(
