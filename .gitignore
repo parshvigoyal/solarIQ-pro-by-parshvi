@@ -3,3 +3,7 @@ __pycache__/
 *.pkl
 *.log
 *.DS_Store
+venv/
+
+# Ignore only the SAM model
+models/sam_vit_b_01ec64.pth

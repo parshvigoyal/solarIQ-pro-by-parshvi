@@ -6,15 +6,17 @@ from segment_anything import sam_model_registry
 from segment_anything import SamAutomaticMaskGenerator
 import os
 
-
 # ===================================================
 # LOAD SAM MODEL
 # ===================================================
 
-if os.path.exists(r"D:\AI_MODELS\sam_vit_b_01ec64.pth"):
-    checkpoint_path = r"D:\AI_MODELS\sam_vit_b_01ec64.pth"
-else:
-    checkpoint_path = "models/sam_vit_b_01ec64.pth"
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+checkpoint_path = os.path.join(
+    BASE_DIR,
+    "models",
+    "sam_vit_b_01ec64.pth"
+)
 
 sam = sam_model_registry["vit_b"](
     checkpoint=checkpoint_path
