@@ -11,3 +11,4 @@ pandas
 torchvision
 python-dotenv
 segment-anything
+gdown

@@ -5,10 +5,11 @@ import cv2
 from segment_anything import sam_model_registry
 from segment_anything import SamAutomaticMaskGenerator
 import os
+import gdown
 
-# ===================================================
+# ==========================================================
 # LOAD SAM MODEL
-# ===================================================
+# ==========================================================
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -18,6 +19,23 @@ checkpoint_path = os.path.join(
     "sam_vit_b_01ec64.pth"
 )
 
+# Create models folder if it doesn't exist
+os.makedirs(os.path.dirname(checkpoint_path), exist_ok=True)
+
+# Download the SAM model automatically if missing
+if not os.path.exists(checkpoint_path):
+
+    print("Downloading SAM model... Please wait.")
+
+    gdown.download(
+        id="1ognfuovQFSR1L2YPiDrrrJFCBw_406hU",
+        output=checkpoint_path,
+        quiet=False
+    )
+
+    print("SAM model downloaded successfully!")
+
+# Load SAM
 sam = sam_model_registry["vit_b"](
     checkpoint=checkpoint_path
 )
